@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ----------------------------------- GENERAL STYLES --------------------------------------*/
+
+body {
+  font-size: 16px;
+}
+
+/* ----------------------------------- CONTAINER STYLES --------------------------------------*/
+
+.parent-container {
+	background-color: #fcfcfc;
+    min-height: 100vh;
+    padding: 50px 10px;
+}
+
+.auth-container {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 5px;
+	box-shadow: 0px 0px 32px 1px rgba(0, 0, 0, 0.027);
+}
+
+@media only screen and (min-width: 768px) {
+    .auth-container {
+        width: 500px;
+    }
+}
+
+
+/* ----------------------------------- OTHER STYLES --------------------------------------*/
+
+#logo {
+    display: block;
+    margin: 0 auto;
+}
+
+.auth-header {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+
+.form-group {
+    position:relative;  
+  
+    & + .form-group {
+      margin-top: 30px;
+    }
+  }
+  
+  .form-label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #999;
+    background-color: #fff;
+    z-index: 10;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+  }
+  
+  .focused .form-label {
+    transform: translateY(-125%);
+    font-size: .75em;
+  }
+  
+  .form-input {
+    position: relative;
+    padding: 12px 0px 5px 0;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    box-shadow: 0 1px 0 0 #e5e5e5;
+    transition: box-shadow 150ms ease-out;
+    
+    &:focus {
+      box-shadow: 0 2px 0 0 blue;
+    }
+  }
+  
+  .form-input.filled {
+    // box-shadow: 0 2px 0 0 lightgreen;
+  }
+
+.form-extras {
+    margin-top: 40px;
+}
+
+  .form-extras div {
+    flex: 1;
+}
+
+.auth-container button {
+    background: rgb(27, 27, 253);
+    padding : 12px 10px;
+     border: none;
+     font-weight: 600;
+     font-size: 18px;
+     display: block;
+     width: 100%;
+     cursor: pointer;
+     color: white;
+     transition: .3s background;
+
+     &:hover {
+       background: rgb(18, 18, 194);
+     }
+}
